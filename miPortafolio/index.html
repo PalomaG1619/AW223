@@ -26,10 +26,10 @@
     <!-- Contenido principal -->
     <main>
         <section class="seccion-inicio">
-            <div>
+            <div class="seccion-contenido">
                 <h2> Hola soy Paloma Guerrero</h2>
                 <p> Soy estudiante de TIID estoy aprendiendo a hacer mi pag web</p>
-                <a href=""> Ver mis proyectos </a>
+                <a href="" class="boton"> Ver mis proyectos </a>
             </div>
         
         </section>
@@ -38,27 +38,34 @@
         <section>
             <div>
                 <h2> Sobre mí </h2>
-            <div>
-              <img src="" alt="Foto de perfil">
+            <div class="sobre-mi-contenido">
+              <img src="1P.jpg" alt="">
              <div>
                 <p> Algo sobre la imagen </p>
+                <p> En esta práctica estoy aprendiendo HTML y CSS</p>
              </div>
-
+            </section>
         <!-- Seccion habilidades -->
         <section>
             <h2> Mis Habilidades </h2>
-            <ul>
+            <ul class="lista-habilidades">
                 <li>Java</li>
                 <li>PseInt</li>
                 <li>PacketTracert</li>
                 <li>Base de datos</li>
             </ul>
-             
+        </section>     
         <!-- Seccion proyectos -->  
          <section>
             <h2> Mis Proyectos </h2>
-            <div>
-                <article>
+            <div class="contenedor-proyectos">
+                <article class="proyecto">
+                    <h3> Sistema de control y monitoreo de luz en una vivienda </h3>
+                    <p> Descripción del proyecto </p>
+                    <a href="">Ver proyecto</a>
+                </article>
+
+                <article class="proyecto">
                     <h3> Sistema de control y monitoreo de luz en una vivienda </h3>
                     <p> Descripción del proyecto </p>
                     <a href="">Ver proyecto</a>
@@ -84,12 +91,6 @@
                     <label for="">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" required></textarea>
                 </div>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
