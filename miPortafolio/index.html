@@ -39,12 +39,13 @@
             <div>
                 <h2> Sobre mí </h2>
             <div class="sobre-mi-contenido">
-              <img src="1P.jpg" alt="">
-             <div>
-                <p> Algo sobre la imagen </p>
-                <p> En esta práctica estoy aprendiendo HTML y CSS</p>
-             </div>
-            </section>
+              <img src="Foto-perfil.jpeg" alt="Foto de perfil">
+              <div>
+                 <p> Algo sobre la imagen </p>
+                 <p> En esta práctica estoy aprendiendo HTML y CSS</p>
+              </div>
+        </section>
+
         <!-- Seccion habilidades -->
         <section>
             <h2> Mis Habilidades </h2>
@@ -55,6 +56,7 @@
                 <li>Base de datos</li>
             </ul>
         </section>     
+        
         <!-- Seccion proyectos -->  
          <section>
             <h2> Mis Proyectos </h2>
@@ -73,26 +75,43 @@
             </div>
          </section>
 
-        <!-- Contenido principal -->
-         <section>
+        <!-- Sección de contacto -->
+         <section id="contacto">
             <h2> Contáctame </h2>
 
             <form action="">
-                <div>
-                    <label for="">Nombre:</label>
-                    <input type="text">
+                <div class="campo">
+                    <label for="">
+                        Nombre:
+                    </label>
+                    <input type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre">
                 </div>
 
-                <div>
-                    <label for="">Correo electrónico:</label>
-                    <input type="text">
+                <div class="campo">
+                    <label for="">
+                        Correo electrónico:
+                    </label>
+                    <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Escribe tu correo electrónico">
                 </div>
-                <div>
+                
+                <div class="campo">
                     <label for="">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    <textarea 
+                    id="mensaje" 
+                    name="mensaje" 
+                    rows="5" 
+                    placeholder="Escribe tu mensaje">
+                    </textarea>
                 </div>
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Enviar mensaje</button>
             </form>
 
         </section>
