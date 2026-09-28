@@ -262,3 +262,18 @@ margin: 5px;
     }
 
 }
+
+/* Estilos para los botones de cambio de color y tipografía */
+#btnColor,
+#btnBienvenida,
+#btnFuente {
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+section:has(.lista-habilidades) {
+    text-align: center;
+}

@@ -10,8 +10,12 @@
 <body>
     <!-- aquí esta el encabezado -->
      <header>
-    <h1>Mi Portafolio</h1>
-    <p>Bienvenido a mi sitio web personal.</p>
+       <h1>Mi Portafolio</h1>
+       <p id="bienvenida">
+        Bienvenido a mi sitio web personal.
+       </p>
+       <!-- botón agregado pract3-->
+       <button id="btnBienvenida">Cambiar bienvenida</button>
 
      </header>
     <!-- aquí comienza la navegacion-->
@@ -49,12 +53,16 @@
         <!-- Seccion habilidades -->
         <section>
             <h2> Mis Habilidades </h2>
-            <ul class="lista-habilidades">
+            <ul class="lista-habilidades" id="lista-habilidades">
                 <li>Java</li>
                 <li>PseInt</li>
                 <li>PacketTracert</li>
                 <li>Base de datos</li>
             </ul>
+
+            <!-- Botones para cambiar color y tipografía -->  
+            <button id="btnColor">Cambiar color</button>
+            <button id="btnFuente">Cambiar tipografía</button>
         </section>     
         
         <!-- Seccion proyectos -->  
@@ -79,7 +87,7 @@
          <section id="contacto">
             <h2> Contáctame </h2>
 
-            <form action="">
+            <form id="formulario">
                 <div class="campo">
                     <label for="">
                         Nombre:
@@ -123,5 +131,7 @@
         <p>2026 Mi portafolio web</p>
         <p>Práctica de Programación Web. Todos los derechos reservados.</p>    
     </footer>
+    
+    <script src="./JS/script.js"></script>
 </body>
 </html>
