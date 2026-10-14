@@ -118,7 +118,7 @@ $id = $_GET["id"] ?? "1";
     </header>
 
     <div class="regreso">
-        <a href="../index.html" title="Regresar al portafolio">⌂</a>
+        <a href="../miPortafolio/index.html" title="Regresar al portafolio">⌂</a>
         <a href="admin.php" title="Regresar a administración">↶</a>
     </div>
 

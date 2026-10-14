@@ -1,4 +1,4 @@
-
+/*
 // CAMBIAR TEXTO DE BIENVENIDA
 
 const btnBienvenida = document.getElementById("btnBienvenida");
@@ -73,3 +73,4 @@ formulario.addEventListener("submit", function(event) {
     alert("Los datos han sido enviados correctamente.");
 
 });
+*/
