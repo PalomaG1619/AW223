@@ -1,7 +1,6 @@
 
 <?php 
-    $nombre= "Paloma Guerrero";
-    $materia="Programación Web";
+    
 ?>
 
 <!DOCTYPE html>
@@ -9,11 +8,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer página PHP</title>
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="../miPortafolio/CSS/estilos.css">
 </head>
 
 <body>
-    <h1> Hola, <?php echo  $nombre; ?></h1>
-    <h4> Bienvenido a mi <?php echo  $materia; ?> </h4>
+    <!-- aquí esta el encabezado -->
+     <header>
+       <h1>Mi Portafolio</h1>
+       <p id="bienvenida">
+        Bienvenido a mi sitio web personal.
+       </p>
+       <!-- botón agregado pract3-->
+       <button id="btnBienvenida">Cambiar bienvenida</button>
+
+     </header>
+    <!-- aquí comienza la navegacion-->
+    <nav>
+        <a href=""> Inicio</a>
+        <a href=""> Sobre mí</a>
+        <a href=""> Habilidades</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Contacto</a>
+        <a href="../holaPHP/admin.php">Admin</a>
+
+    </nav>
+    <!-- Contenido principal -->
+    <main>
+        <section class="seccion-inicio">
+            <div class="seccion-contenido">
+                <h2> Hola soy Paloma Guerrero</h2>
+                <p> Soy estudiante de TIID estoy aprendiendo a hacer mi pag web</p>
+                <a href="" class="boton"> Ver mis proyectos </a>
+            </div>
+        
+        </section>
+
+        <!-- Seccion sobre mí -->
+        <section>
+            <div>
+                <h2> Sobre mí </h2>
+            <div class="sobre-mi-contenido">
+              <img src="Foto-perfil.jpeg" alt="Foto de perfil">
+              <div>
+                 <p> Algo sobre la imagen </p>
+                 <p> En esta práctica estoy aprendiendo HTML y CSS</p>
+              </div>
+        </section>
+
+        <!-- Seccion habilidades -->
+        <section>
+            <h2> Mis Habilidades </h2>
+            <ul class="lista-habilidades" id="lista-habilidades">
+                <li>Java</li>
+                <li>PseInt</li>
+                <li>PacketTracert</li>
+                <li>Base de datos</li>
+            </ul>
+
+            <!-- Botones para cambiar color y tipografía -->  
+            <button id="btnColor">Cambiar color</button>
+            <button id="btnFuente">Cambiar tipografía</button>
+        </section>     
+        
+        <!-- Seccion proyectos -->  
+         <section>
+            <h2> Mis Proyectos </h2>
+            <div class="contenedor-proyectos">
+                <article class="proyecto">
+                    <h3> Sistema de control y monitoreo de luz en una vivienda </h3>
+                    <p> Descripción del proyecto </p>
+                    <a href="">Ver proyecto</a>
+                </article>
+
+                <article class="proyecto">
+                    <h3> Sistema de control y monitoreo de luz en una vivienda </h3>
+                    <p> Descripción del proyecto </p>
+                    <a href="">Ver proyecto</a>
+                </article>
+            </div>
+         </section>
+
+        <!-- Sección de contacto -->
+         <section id="contacto">
+            <h2> Contáctame </h2>
+
+            <form id="formulario" action="guardar_mensaje.php" method="post">
+                <div class="campo">
+                    <label for="">
+                        Nombre:
+                    </label>
+                    <input type="text"
+                    id="nombre"
+                    name="txtnombre"
+                    placeholder="Escribe tu nombre">
+                </div>
+
+                <div class="campo">
+                    <label for="">
+                        Correo electrónico:
+                    </label>
+                    <input
+                    type="email"
+                    id="correo"
+                    name="txtcorreo"
+                    placeholder="Escribe tu correo electrónico">
+                </div>
+                
+                <div class="campo">
+                    <label for="">Mensaje:</label>
+                    <textarea 
+                    id="mensaje" 
+                    name="txtmensaje" 
+                    rows="5" 
+                    placeholder="Escribe tu mensaje">
+                    </textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>2026 Mi portafolio web</p>
+        <p>Práctica de Programación Web. Todos los derechos reservados.</p>    
+    </footer>
+    
+    <script src="../miPortafolio/JS/script.js"></script>
+    <script src="../miPortafolio/JS/AlertInsert.js"></script>
 </body>
 </html>
