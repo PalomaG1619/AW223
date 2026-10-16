@@ -70,7 +70,7 @@ formulario.addEventListener("submit", function(event) {
     }
 
 
-    alert("Los datos han sido enviados correctamente.");
+    //alert("Los datos han sido enviados correctamente.");
 
 });
 */

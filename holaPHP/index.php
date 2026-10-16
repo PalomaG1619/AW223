@@ -3,6 +3,7 @@
     $nombre= "Paloma Guerrero";
     $materia="Programación Web";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

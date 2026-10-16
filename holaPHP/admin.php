@@ -150,10 +150,10 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Mensaje</th>
+                        <th>Fecha</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
