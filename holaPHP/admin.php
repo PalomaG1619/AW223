@@ -165,38 +165,23 @@
 
                         while($arrMensaje= mysqli_fetch_array($rsMensajes)) {
                             echo "<tr>
-                            <tr>
                                 <td>".$arrMensaje ['nombre']."</td>
                                 <td>".$arrMensaje ['correo']."</td>
                                 <td>".$arrMensaje ['mensaje']."</td>
                                 <td>".$arrMensaje ['timeStaps']."</td>
                                 <td class='opciones'>
                                 <a class='icono editar'
-                                href='editar.php?id=1'
+                                href='editar.php?id=".$arrMensaje['id']."'
                                 title='Editar'>✏️</a>
 
                                 <button class='icono borrar'
                                      type='button'
                                      title='Borrar'>🗑️</button>
-                            </td>
+                                </td>
                             </tr>";
                             }
                     ?>
 
-                    <tr>
-                        <td>Paloma</td>
-                        <td>paloma@ejemplo.com</td>
-                        <td>Quisiera más información.</td>
-                        <td class="opciones">
-                            <a class="icono editar"
-                               href="editar.php?id=2"
-                               title="Editar">✏️</a>
-
-                            <button class="icono borrar"
-                                    type="button"
-                                    title="Borrar">🗑️</button>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
