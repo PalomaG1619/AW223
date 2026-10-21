@@ -171,16 +171,26 @@
                                 <td>".$arrMensaje ['timeStaps']."</td>
                                 <td class='opciones'>
                                 <a class='icono editar'
-                                href='editar.php?id=".$arrMensaje['id']."'
+                                href='editar.php?id=". $arrMensaje['id']."'
                                 title='Editar'>✏️</a>
 
-                                <button class='icono borrar'
-                                     type='button'
-                                     title='Borrar'>🗑️</button>
+                                <form action='borrar_msj.php' method='post'
+                                      onsubmit=\"return confirm('¿Estás seguro de borrar este mensaje?');\"
+                                      style='display:inline;'>
+
+                                      <input type='hidden' name='id'
+                                      value='" . (int)$arrMensaje['id'] . "'>
+
+                                      <button class='icono borrar'
+                                       type='submit'
+                                       title='Borrar'>🗑️</button>
+                                </form>
                                 </td>
                             </tr>";
                             }
                     ?>
+
+                    <script src="../miPortafolio/JS/AlertInsert.js"></script>
 
                 </tbody>
             </table>

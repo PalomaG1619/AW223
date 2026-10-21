@@ -1,6 +1,13 @@
 
 <?php
-$id = $_GET["id"] ?? "1";
+require_once "consulta_mensajes.php";
+
+$id = $_GET["id"] ?? 0;
+$mensaje = consultaMensajePorId($id);
+
+if (!$mensaje) {
+    die("No se encontró el mensaje.");
+}
 ?>
 
 <!DOCTYPE html>
@@ -125,14 +132,16 @@ $id = $_GET["id"] ?? "1";
     <main>
         <h2>Editar Mensaje</h2>
 
-        <form action="#" method="post">
+        <form action="actualizar_msj.php" method="post">
+            <input type="hidden" name="id" value="<?php echo (int)$id; ?>">
 
             <label for="nombre">Nombre:</label>
             <input
                 type="text"
                 id="nombre"
                 name="nombre"
-                value="Yuliana"
+                value="<?php echo htmlspecialchars($mensaje['nombre']); ?>"
+                required
             >
 
             <label for="correo">Correo electrónico:</label>
@@ -140,7 +149,8 @@ $id = $_GET["id"] ?? "1";
                 type="email"
                 id="correo"
                 name="correo"
-                value="yuliana@ejemplo.com"
+                value="<?php echo htmlspecialchars($mensaje['correo']); ?>"
+                required
             >
 
             <label for="mensaje">Mensaje:</label>
@@ -148,10 +158,10 @@ $id = $_GET["id"] ?? "1";
                 id="mensaje"
                 name="mensaje"
                 rows="5"
-            ></textarea>
+                required
+            ><?php echo htmlspecialchars($mensaje['mensaje']); ?></textarea>
 
-            <button type="button"
-                    onclick="alert('Este botón es solo de prueba.')">
+            <button type="submit">
                 Actualizar Mensaje
             </button>
 

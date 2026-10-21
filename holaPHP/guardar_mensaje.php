@@ -1,20 +1,38 @@
 
 <?php
+require_once "conexion.php";
 
-require_once("conexion.php");
+$nombre = trim($_POST["txtnombre"] ?? "");
+$correo = trim($_POST["txtcorreo"] ?? "");
+$mensaje = trim($_POST["txtmensaje"] ?? "");
 
-$nombre = $_POST["txtnombre"];
-$correo = $_POST["txtcorreo"];
-$mensaje = $_POST["txtmensaje"];
-
-$sqlInsert = "INSERT INTO mensajes(nombre, correo, mensaje) VALUES (?,?,?)";
-
-$stmt = $conexion->prepare($sqlInsert);
-
-$stmt->bind_param("sss", $nombre, $correo, $mensaje);
-
-if ($stmt->execute()) {
-    header("Location: index.php?estadophp=exito");
-} else {
-    header("Location: index.php?estadophp=error");
+if ($nombre === "" || $correo === "" || $mensaje === "") {
+    header("Location: index.php?estadophp=vacios");
+    exit;
 }
+
+$sql = "INSERT INTO mensajes (nombre, correo, mensaje)
+        VALUES (?, ?, ?)";
+
+$stmt = mysqli_prepare($conexion, $sql);
+
+mysqli_stmt_bind_param(
+    $stmt,
+    "sss",
+    $nombre,
+    $correo,
+    $mensaje
+);
+
+if (mysqli_stmt_execute($stmt)) {
+    $estado = "exito";
+} else {
+    $estado = "error";
+}
+
+mysqli_stmt_close($stmt);
+mysqli_close($conexion);
+
+header("Location: index.php?estadophp=" . $estado);
+exit;
+?>
