@@ -5,9 +5,9 @@ import "./App.css";
 export default function App() {
 
   const estudiantes = [
-    {id: 1, nombre: "Juan", carrera: "Ingeniería"},
-    {id: 2, nombre: "María", carrera: "Medicina"},
-    {id: 3, nombre: "Pedro", carrera: "Derecho"},
+    {id: 1, nombre: "Ivan", carrera: "Sistemas"},
+    {id: 2, nombre: "Reyna", carrera: "Comercio"},
+    {id: 3, nombre: "Pedro", carrera: "Psicología"},
   ];
   
   return (
