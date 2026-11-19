@@ -24,7 +24,6 @@ export default function ListaDestinos({
             agregarFavorito={agregarFavorito}
             esFavorito={favoritos.includes(destino.id)}
           />
-
         ))
 
       )}

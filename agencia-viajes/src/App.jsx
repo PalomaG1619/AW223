@@ -117,7 +117,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© 2026 Travel Dreams | Tu próxima aventura comienza aquí ✈️</p>
+        <p>© 2026 Travel Dreams | Tu próxima aventura comienza aquí </p>
       </footer>
 
     </div>
